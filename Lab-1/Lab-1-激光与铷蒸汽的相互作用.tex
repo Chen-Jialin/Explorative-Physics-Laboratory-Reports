@@ -1,9 +1,38 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper, 10pt]{article}
 \usepackage[UTF8]{ctex}
 \usepackage[margin=.75in]{geometry}
+\usepackage{multicol}
 \usepackage{amsmath, amssymb, amsthm, bm, mathrsfs}
 \usepackage{graphicx}
 \usepackage{subfigure}
+%%%% subsubsubsection定义
+\usepackage{titlesec}
+\titleclass{\subsubsubsection}{straight}[\subsection]
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}}
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+  {3.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+\setcounter{secnumdepth}{4}
+%%%%
 \begin{document}
 \title{激光与铷蒸汽的相互作用}
 \author{陈稼霖\and 李正阳\and 吴杨\and 薛加民}
@@ -13,4 +42,54 @@
     铷蒸汽对透过其传播的光具有两方面的作用：一方面，吸收特定频率的光；另一方面，给光带来相位差. 铷蒸汽折射率的虚部和实部分别刻画了这两方面的作用，该两者为入射光频率的函数并遵循Kramers-Kronig关系. 我们利用饱和吸收法测量了铷蒸汽中$^{85}$Rb和$^{87}$Rb两种同位素的在$780$ nm波长附近、达到超精细结构量级分辨率的吸收谱，并用Mach-Zehnder干涉仪验证了其折射率满足的Kramer-Kronig关系.
 \end{abstract}
 
+\begin{multicols}{2}
+\section{实验思路}
+
+\section{理论背景}
+
+\subsection{铷原子的能级结构与光谱}
+
+\subsubsection{铷原子的超精细能级结构}
+
+\subsubsection{光谱增宽}
+
+\subsection{饱和吸收法}
+
+\subsubsection{饱和吸收法的基本原理}
+
+\subsubsection{交叉共振现象}
+
+\subsection{Kramers-Kronig关系及其在气体折射率中的体现}
+
+\subsubsection{Kramers-Kronig关系}
+
+\subsubsection{气体折射率中的Kramer-Kronig关系}
+
+\subsubsection{经典力学图像}
+
+\subsubsection{量子力学图像}
+
+\subsubsection{气体折射率实部与虚部之间的关系}
+
+\subsection{Mach-Zehnder干涉仪原理}
+
+\section{实验测量与验证}
+
+\subsection{利用饱和吸收法测量铷蒸汽吸收谱}
+
+\subsubsection{实验设定}
+
+\subsubsection{结果与分析}
+
+\subsection{利用Mach-Zehnder干涉仪验证折射率的Kramers-Kronig关系}
+
+\section{结论}
+
+\section{反思}
+
+\begin{appendix}
+\section{参考文献}
+
+\end{appendix}
+\end{multicols}
 \end{document}
