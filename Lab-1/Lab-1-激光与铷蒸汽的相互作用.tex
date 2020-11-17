@@ -52,10 +52,10 @@
 \date{2020 年 10 月 7 日}
 \maketitle
 \begin{abstract}
-    铷蒸汽对透过其传播的光具有两方面的作用：一方面，吸收特定频率的光；另一方面，给光带来相位差. 铷蒸汽折射率的虚部和实部分别刻画了这两方面的作用，该两者为入射光频率的函数并遵循Kramers-Kronig关系. 我们利用饱和吸收法测量了铷蒸汽中$^{85}$Rb和$^{87}$Rb两种同位素的在$780$ nm波长附近、达到超精细结构量级分辨率的吸收谱，并用Mach-Zehnder干涉仪验证了其折射率满足的Kramers-Kronig关系.
+    铷蒸汽对透过其传播的光具有两方面的作用：一方面，吸收特定频率的光；另一方面，给光带来相位差. 铷蒸汽折射率的虚部和实部分别刻画了这两方面的作用，该两者为入射光频率的函数并遵循Kramers-Kronig关系. 我们利用饱和吸收法测量了铷蒸汽中$^{85}$Rb和$^{87}$Rb两种同位素在$780$ nm波长附近、达到超精细结构量级分辨率的吸收谱，并用Mach-Zehnder干涉仪验证了其折射率满足的Kramers-Kronig关系.
 \end{abstract}
 
-\begin{multicols}{2}
+\begin{multicols*}{2}
 \section{实验思路}
 在光强较弱而无需考虑非线性效应的情况下，气体与透过其传播的光的相互作用可以简单概括为两个方面：一方面，气体中的原子通过受激吸收可以衰减特定频率的光强，另一方面，光在气体中传播的速度往往不同于真空中的光速，因此光透过气体传播时所获得的相位与在真空中传播相同距离获得相位不同. 这两方面的作用可以分别用气体折射率的实部和虚部来刻画. 气体的折射率（或者更严谨地说，电极化率）的实质是气体电极化强度对光的电场分量在频域上的响应函数. 在弱场下，气体的电极化强度正比于电场强度，因而可被视为线性系统，而线性系统的一般规律要求气体折射率的实部与虚部应满足Kramers-Kronig关系.
 
@@ -85,11 +85,11 @@
     \end{tabular}
 \end{table}
 
-原子核存在磁矩，而核外电子运动在原子核处产生磁场，从而带来所谓的磁偶级超精细相互作用，其引起的能级位移为
+原子核的磁矩与核外电子运动在原子核处产生的磁场耦合，从而带来磁偶级超精细相互作用，其引起的能级位移为
 \begin{align}
     \Delta E=\frac{a_J}{2}[F(F+1)-J(J+1)-I(I+1)],
 \end{align}
-其中$a_J$是一个与原子状态有关的常数. 铷原子的两种同位素的超精细结构能级如图\ref{energy-state}所示. 图中所标$^2$P$_{3/2}$态的超精细结构能级分裂的比例接近上式但略微存在偏差，偏差的来源是电四极超精细相互作用：原子核内的电荷分布存在电四极矩，铷原子的基态为$S$态，电子波函数球对称分布，在原子核处的电场梯度为零，故不存在电四极相互作用，而对于激发态$^2$P$_{3/2}$，核外电子在原子核处的电场存在梯度，故存在电四极矩相互作用. 电四极超精细相互作用造成的能量分裂小于磁偶级超精细相互作用，可视其为在电偶极相互作用能级分裂上一个的小修正.
+其中$a_J$是一个与原子状态有关的常数. 铷原子的两种同位素的超精细结构能级如图\ref{energy-state}所示. 图中所标$^2$P$_{3/2}$态的超精细结构能级分裂的比例接近上式但略微存在偏差，偏差的来源是电四极超精细相互作用：原子核具有电四极矩，铷原子的基态为$S$态，电子波函数球对称分布，在原子核处的电场梯度为零，故不存在电四极相互作用，而对于激发态$^2$P$_{3/2}$，核外电子在原子核处的电场存在梯度，故存在电四极矩相互作用. 电四极超精细相互作用造成的能量分裂小于磁偶级超精细相互作用，可视其为在电偶极相互作用能级分裂上一个的小修正.
 
 \begin{figure}[H]
     \centering
@@ -101,18 +101,82 @@
     \label{energy-state}
 \end{figure}
 
-根据跃迁的选择定则，
+由于跃迁必须遵循角动量守恒，故有选择定则：
 \begin{align}
+    \label{transition-choosing-rule}
     \Delta F=0,\pm 1,
 \end{align}
-从$5P_{3/2}$态到$5P_{1/2}$态存在如图\ref{energy-state}所示的跃迁，其中$^{85}$Rb的终态$F=2$的跃迁对应的一系列谱线标号为$85$a，终态$F=3$的跃迁对应的一系列谱线标号为$^{85}$b，$^{87}$Rb的终态$F=1$的跃迁对应的一系列谱线标号为$87$a，终态$F=2$的跃迁对应的一系列谱线标号为$87$b. 每种标号的谱线系实际上各包含三条谱线，但在无饱和吸收的情况下，同一个谱线系中的三条谱线因增宽而相互重叠（详述于下一小小节），在光谱上只表现为一个峰，如图\ref{theoretical-absorption}所示.
+故从$5^2$P$_{3/2}$态到$5^2$P$_{1/2}$态存在如图\ref{energy-state}所示的跃迁，其中$^{85}$Rb的终态$F=2$的跃迁对应的一系列谱线标号为$85$a，终态$F=3$的跃迁对应的一系列谱线标号为$85$b，$^{87}$Rb的终态$F=1$的跃迁对应的一系列谱线标号为$87$a，终态$F=2$的跃迁对应的一系列谱线标号为$87$b. 每种标号的谱线系实际上各包含由于$5^2$P$_{3/2}$的超精细结构劈裂所致的三条谱线，但在无饱和吸收的情况下，同一个谱线系中的三条谱线因增宽而相互重叠（详述于下文），在光谱上只表现为一个峰，如图\ref{theoretical-absorption}所示.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.9\columnwidth]{TheoreticalAbsorption.png}
+    \includegraphics[width=.9\columnwidth]{TheoreticalAbsorption.pdf}
     \caption{铷蒸汽吸收谱的理论线型.}
     \label{theoretical-absorption}
 \end{figure}
+
+
+\subsubsection{光谱各峰面积比}
+根据天然铷元素的两种同位素丰度之比以及表\ref{quantum-number}中各量子数的组合情况可推算铷原子谱线中各峰面积之比.
+
+$^{85}$Rb的$5^2$S$_{1/2}$态对应$F=3,2$的能级、$^{87}$Rb的$5^2$S$_{1/2}$态对应$F=2,1$的能级有如表\ref{ground-state-degenerate}所示的简并情况，这$4$个能级简并度之比为
+\[
+    2:1:2:1.
+\]
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{两种铷同位素的基态能级简并情况}
+    \label{ground-state-degenerate}
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    同位素类型 & 原子态符号 & $F$ & $m_I$ & $m_J$ \\ \hline
+    \multirow{3}{*}{$^{85}$Rb} & \multirow{3}{*}{$5^2$S$_{1/2}$} & $3$ & $\frac{5}{2}$ & $\frac{1}{2}$ \\ \cline{3-5} 
+     &  & \multirow{2}{*}{$2$} & $\frac{5}{2}$ & $-\frac{1}{2}$ \\ \cline{4-5} 
+     &  &  & $\frac{3}{2}$ & $\frac{1}{2}$ \\ \hline
+    \multirow{3}{*}{$^{87}$Rb} & \multirow{3}{*}{$5^2$S$_{1/2}$} & $2$ & $\frac{3}{2}$ & $\frac{1}{2}$ \\ \cline{3-5} 
+     &  & \multirow{2}{*}{$1$} & $\frac{3}{2}$ & $-\frac{1}{2}$ \\ \cline{4-5} 
+     &  &  & $\frac{1}{2}$ & $\frac{1}{2}$ \\ \hline
+    \end{tabular}
+    \end{table}
+$^{85}$Rb的$5^2$P$_{3/2}$态对应$F=1,2,3,4$的能级,$^{87}$Rb的$5^2$P$_{3/2}$态对应$F=0,1,2,3$的能级有如表所示的简并情况，这$8$个能级简并度之比为
+\[
+    4:3:2:1:2:3:2:1
+\]
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{两种铷同位素的$5^2$P$_{3/2}$态能级简并情况}
+    \label{excited-state-degenerate}
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    同位素类型 & 原子态符号 & $F$ & $m_I$ & $m_J$ \\ \hline
+    \multirow{10}{*}{$^{85}$Rb} & \multirow{10}{*}{$5^2$P$_{3/2}$} & \multirow{4}{*}{$1$} & $\frac{5}{2}$ & $-\frac{3}{2}$ \\ \cline{4-5} 
+        &  &  & $\frac{3}{2}$ & $-\frac{1}{2}$ \\ \cline{4-5} 
+        &  &  & $\frac{1}{2}$ & $\frac{1}{2}$ \\ \cline{4-5} 
+        &  &  & $-\frac{1}{2}$ & $\frac{3}{2}$ \\ \cline{3-5} 
+        &  & \multirow{3}{*}{$2$} & $\frac{5}{2}$ & $-\frac{1}{2}$ \\ \cline{4-5} 
+        &  &  & $\frac{3}{2}$ & $\frac{1}{2}$ \\ \cline{4-5} 
+        &  &  & $\frac{1}{2}$ & $\frac{3}{2}$ \\ \cline{3-5} 
+        &  & \multirow{2}{*}{$3$} & $\frac{5}{2}$ & $\frac{1}{2}$ \\ \cline{4-5} 
+        &  &  & $\frac{3}{2}$ & $\frac{3}{2}$ \\ \cline{3-5} 
+        &  & $4$ & $\frac{5}{2}$ & $\frac{3}{2}$ \\ \hline
+    \multirow{8}{*}{$^{87}$Rb} & \multirow{8}{*}{$5^2$P$_{3/2}$} & \multirow{2}{*}{$0$} & $\frac{3}{2}$ & $-\frac{3}{2}$ \\ \cline{4-5} 
+        &  &  & $\frac{1}{2}$ & $-\frac{1}{2}$ \\ \cline{3-5} 
+        &  & \multirow{3}{*}{$1$} & $\frac{3}{2}$ & $-\frac{1}{2}$ \\ \cline{4-5} 
+        &  &  & $\frac{1}{2}$ & $\frac{1}{2}$ \\ \cline{4-5} 
+        &  &  & $-\frac{1}{2}$ & $\frac{3}{2}$ \\ \cline{3-5} 
+        &  & \multirow{2}{*}{$2$} & $\frac{3}{2}$ & $\frac{1}{2}$ \\ \cline{4-5} 
+        &  &  & $\frac{1}{2}$ & $\frac{3}{2}$ \\ \cline{3-5} 
+        &  & $3$ & $\frac{3}{2}$ & $\frac{3}{2}$ \\ \hline
+    \end{tabular}
+\end{table}
+
+根据式\eqref{transition-choosing-rule}描述的选择定则，铷蒸汽吸收谱中$85$,$85$b,$87$a,$87$b这四个峰的峰面积之比为
+\begin{gather*}
+    72.17\%\times 6\times 1:72.17\%\times 9\times 2:\\
+    27.83\%\times 6\times 1:27.83\%\times 7\times 2.
+\end{gather*}
 
 \subsubsection{光谱增宽}
 实验中测得的铷原子谱线并非分立的狄拉克函数状的特征峰，而是存在由不确定性原理和有限的能级寿命共同导致的洛伦兹增宽和由热运动的原子的多普勒效应导致的多普勒增宽. 下面我们分别来讨论这两种增宽.
@@ -235,7 +299,7 @@
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.9\columnwidth]{Broadening.png}
+    \includegraphics[width=.9\columnwidth]{Broadening.pdf}
     \caption{综合增宽机制示意图：各洛伦兹线型子光谱以高斯线型权重叠加成Voigt线型总光谱.}
     \label{broadening}
 \end{figure}
@@ -250,7 +314,7 @@
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.95\columnwidth]{SaturatedAbsorption.png}
+    \includegraphics[width=.95\columnwidth]{SaturatedAbsorption.pdf}
     \caption{饱和吸收光谱原理示意图. (a) 饱和吸收光谱理论线型，(b) 当入射激光频率略小于跃迁频率，激光与气体中原子的作用机制示意图，(c) 当入射光频率等于跃迁频率时，激光与气体中原子的作用机制示意图.}
     \label{saturated-absorption}
 \end{figure}
@@ -266,7 +330,7 @@
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.95\columnwidth]{CrossoverResonant.png}
+    \includegraphics[width=.95\columnwidth]{CrossoverResonant.pdf}
     \caption{交叉共振现象示意图. (a) V型三能级系统，(b) 当入射激光频率为$(\nu_1+\nu_2)/2$时，激光与气体中原子的作用机制示意图，(c) V型三能级系统的饱和吸收光谱理论线型，(d) $\Lambda$型三能级系统的饱和吸收光谱理论线型.}
     \label{crossover-resonant}
 \end{figure}
@@ -295,15 +359,14 @@
 \end{align}
 其中
 \begin{align}
-    f_o(t)=\left\{\begin{array}{ll}
-        \frac{1}{2}f(t),&t>0,\\
-        -\frac{1}{2}f(-t),&t<0,
+    h_o(t)=\left\{\begin{array}{ll}
+        \frac{1}{2}h(t),&t>0,\\
+        -\frac{1}{2}h(-t),&t<0,
     \end{array}\right.
 \end{align}
 为一奇函数，而由于符号函数$\sgn(t)$亦为一奇函数，故$\sgn(t)h_o(t)$为一偶函数. 经过傅里叶变换，得频域中响应函数
 \begin{align}
-    \notag H(\omega)=&\mathscr{F}[f(t)]=\frac{1}{\sqrt{2\pi}}\mathscr{F}\left[\sgn(t)\right]*H_o(f)+H_o(f)\\
-    =&\frac{1}{\pi}\frac{1}{i\omega}*H_o(\omega)+H_o(\omega),
+    H(\omega)=\mathscr{F}[f(t)]=\frac{1}{\pi}\frac{1}{i\omega}*H_o(\omega)+H_o(\omega),
 \end{align}
 其中
 \begin{align}
@@ -351,7 +414,7 @@
 \end{align}
 则气体的电极化矢量为
 \begin{align}
-    P(t)=\frac{N}{V}p(t)=\frac{e^2NE(t)}{mV}\frac{1}{(\omega_0^2-\omega^2)-2i\gamma\omega}=\epsilon_0\chi E(t).
+    P(t)=\frac{N}{V}p(t)=\frac{e^2NE(t)}{mV}\frac{1}{(\omega_0^2-\omega^2)-2i\gamma\omega}.
 \end{align}
 故电极化率为
 \begin{align}
@@ -368,8 +431,7 @@
 \end{align}
 对于较小的电极化率，上式可近似为
 \begin{align}
-    \notag n\approx 1+\frac{\chi}{2}=&1+\frac{2\pi Nfe^2}{mV}\frac{1}{(\omega_0^2-\omega^2)-i\omega\gamma}\\
-    =&1+\frac{2\pi Nfe^2}{mV}\frac{(\omega_0^2-\omega^2)+2i\omega\gamma}{(\omega_0^2-\omega^2)^2+4\omega^2\gamma^2}.
+    n\approx 1+\frac{\chi}{2}=1+\frac{2\pi Nfe^2}{mV}\frac{(\omega_0^2-\omega^2)+2i\omega\gamma}{(\omega_0^2-\omega^2)^2+4\omega^2\gamma^2}.
 \end{align}
 将折射率写成实部与虚部相加的形式
 \begin{align}
@@ -385,20 +447,18 @@
 \end{align}
 当电磁场振荡频率与谐振子的本征频率相近（如本实验中入射激光的频率在铷原子共振频率附近扫描），$\omega\approx\omega_0$，上面两式还可进一步近似为
 \begin{align}
-    \notag n_0=&1-\frac{2\pi Nfe^2}{mV}\frac{\frac{(\omega+\omega_0)(\omega-\omega_0)}{\omega_0(\omega+\omega_0)}}{\frac{(\omega+\omega_0)^2(\omega-\omega_0)^2+4\omega^2\gamma^2}{\omega_0(\omega+\omega_0)}}\\
-    \notag\approx&1-\frac{2\pi Nfe^2}{mV}\frac{(\omega-\omega_0)/\omega_0}{2(\omega-\omega_0)^2+2\gamma^2}\\
+    \notag n_0\approx&1-\frac{2\pi Nfe^2}{mV}\frac{(\omega-\omega_0)/\omega_0}{2(\omega-\omega_0)^2+2\gamma^2}\\
     =&1-\frac{\pi Nfe^2}{mV}\frac{\Delta\omega/\omega_0}{\Delta\omega^2+\gamma^2},
 \end{align}
 和
 \begin{align}
-    \notag n_0\kappa=&\frac{2\pi Nfe^2}{mV}\frac{\frac{2\omega\gamma}{\omega_0(\omega+\omega_0)}}{\frac{(\omega+\omega_0)^2(\omega-\omega_0)^2+4\omega^2\gamma^2}{\omega_0(\omega+\omega_0)}}\\
-    \notag\approx&\frac{2\pi Nfe^2}{mV}\frac{\gamma/\omega_0}{2(\omega-\omega_0)^2+2\gamma^2}\\
+    \notag n_0\kappa\approx&\frac{2\pi Nfe^2}{mV}\frac{\gamma/\omega_0}{2(\omega-\omega_0)^2+2\gamma^2}\\
     =&\frac{\pi Nfe^2}{mV}\frac{\gamma/\omega_0}{\Delta\omega^2+\gamma^4}.
 \end{align}
 
 理论上说，电磁波的磁场也应对振子产生作用（洛伦兹力），而在上面的推导中，我们却忽略了这一项，这是因为电子在电磁波中受到洛伦兹力的量级远小于电场力的量级. 我们可以通过简单的估算说明这一点. 假设电磁波中的电场强度最大值为$1$V/m，则电子受到电场力大小为
 \begin{align}
-    F_{\text{electric}}=eE=1.6\times 10^{-19}\text{C}\times 1\text{V/m}=1.6\times 10^{-19}\text{N}.
+    F_{\text{electric}}=eE=1.6\times 10^{-19}\text{N}.
 \end{align}
 磁感应强度$\bm{B}$与电场$\bm{E}$具有如下关系
 \begin{align}
@@ -407,7 +467,7 @@
 其中$\bm{k}$为电磁波的波矢，$\omega$为电磁波的角频率.
 在真空中，
 \begin{align}
-    B=\frac{E}{c}=\frac{1\text{V/m}}{3\times 10^8\text{m/s}}=\frac{1}{3}\times 10^{-8}\text{T}.
+    B=\frac{E}{c}=\frac{1}{3}\times 10^{-8}\text{T}.
 \end{align}
 我们用玻尔模型估算原子中电子的运动速度. 玻尔模型中，氢原子的电子和原子核之间的库仑力提供向心力使电子绕原子核旋转：
 \begin{align}
@@ -416,11 +476,7 @@
 \end{align}
 其中$v$为电子的线速率，$r$为电子轨道半径，$\epsilon_0$为真空中介电常数. 根据玻尔的假设，电子轨道的周长是其波长的整数倍
 \begin{align}
-    2\pi r=n\lambda=n\frac{h}{p}=n\frac{h}{mv},
-\end{align}
-从而
-\begin{align}
-    r=\frac{\hbar}{mv}.
+    2\pi r=n\lambda=n\frac{h}{mv}.
 \end{align}
 将上式代入式\eqref{Bohr-1}中解得电子运动速率
 \begin{align}
@@ -455,9 +511,7 @@ $t=0$时刻开始入射一电磁波，其电场分量表为
 在弱场条件下，可做偶极近似，微扰哈密顿量仅非对角矩阵元非零：
 \begin{align}
     \label{perturbed-Hamiltonian}
-    \notag\hat{H}_I(t)=&-\hat{\bm{p}}\cdot\bm{E}(t)=\hat{1}\left[-\hat{\bm{p}}\cdot\bm{E}(t)\right]\hat{1}\\
-    \notag=&\sum_{m=1,2}\lvert m\rangle\langle m\rvert\left[\hat{\bm{p}}\cdot\bm{E}(t)\right]\sum_{l=1,2}\lvert l\rangle\langle l\rvert\\
-    =&-p_{12}E_0e^{i\omega t}\lvert 1\rangle\langle 2\rvert-p_{21}E_0e^{i\omega t}\lvert 2\rangle\langle 1\rvert.
+    \hat{H}_I(t)=&-\hat{\bm{p}}\cdot\bm{E}(t)=-p_{12}E_0e^{i\omega t}\lvert 1\rangle\langle 2\rvert-p_{21}E_0e^{i\omega t}\lvert 2\rangle\langle 1\rvert.
 \end{align}
 其中$\hat{\bm{p}}$为电偶极矩算符，其在基底$\{\lvert 1\rangle,\lvert 2\rangle\}$上展开的矩阵元为
 \begin{align}
@@ -495,18 +549,14 @@ $t=0$时刻开始入射一电磁波，其电场分量表为
 \end{align}
 而一阶近似项随着时间的演化为
 \begin{align}
-    \notag\hat{\rho}^{'(1)}(t)=&\left(-\frac{i}{\hbar}\right)\int_0^td\tau_1\,[\hat{H}_I'(\tau_1),\hat{\rho}^{'(0)}(t)],\\
-    =&\left(-\frac{i}{\hbar}\right)\int_0^td\tau_1\,[\hat{H}_I'(\tau_1),\hat{\rho}^{(0)}(0)].
+    \hat{\rho}^{'(1)}(t)=\left(-\frac{i}{\hbar}\right)\int_0^td\tau_1\,[\hat{H}_I'(\tau_1),\hat{\rho}^{(0)}(0)].
 \end{align}
 故在薛定谔绘景中，
-\tiny
 \begin{align}
     \hat{\rho}^{(0)}(t)=&\hat{\rho}^{(0)}(0),\\
     \notag\hat{\rho}^{(0)}(t)=&\hat{U}_0(t)\hat{\rho}^{(0)}(t)\hat{U}_0(-t)\\
-    \notag=&\left(-\frac{i}{\hbar}\right)\hat{U}_0(t)\int_0^td\tau_1\,[\hat{H}_I'(\tau_1),\hat{\rho}^{(0)}(0)]\hat{U}_0(-t)\\
-    =&\left(-\frac{i}{\hbar}\right)\int_0^t\,d\tau_1\hat{U}_0(t-\tau_1)\left[\hat{H}_I(\tau_1)\hat{\rho}^{(0)}(0)-\hat{\rho}^{(0)}(0)\hat{H}_I(\tau_1)\right]\hat{U}_0(-(t-\tau_1)).
+    =&\left(-\frac{i}{\hbar}\right)\hat{U}_0(t)\int_0^td\tau_1\,[\hat{H}_I'(\tau_1),\hat{\rho}^{(0)}(0)]\hat{U}_0(-t).
 \end{align}
-\normalsize
 将微扰哈密顿量（式\eqref{perturbed-Hamiltonian}）和密度矩阵的初始值（式\eqref{density-matrix-init-value}）代入上式，得
 \tiny
 \begin{align}
@@ -528,18 +578,15 @@ $\Gamma_{21}>0$为密度矩阵相干矩阵元自发弛豫系数.
 \end{align}
 \normalsize
 此时气体的电极化强度大小为（如前所述，考虑的是弱场条件，故仅近似到一阶项）
-\tiny
 \begin{align}
-    \notag\langle\hat{P}\rangle=&\tr\left[\frac{N}{V}\hat{p}\hat{\rho}\right]\approx\tr\left[\frac{N}{V}\hat{p}\left(\hat{\rho}^{(0)}+\hat{\rho}^{(1)}\right)\right]=N\sum_{n=1,2}\langle n\rvert\left[N\hat{p}\left(\hat{\rho}^{(0)}+\hat{\rho}^{(1)}\right)\right]\lvert n\rangle\\
+    \notag\langle\hat{P}\rangle=&\tr\left[\frac{N}{V}\hat{p}\hat{\rho}\right]\approx\tr\left[\frac{N}{V}\hat{p}\left(\hat{\rho}^{(0)}+\hat{\rho}^{(1)}\right)\right]\\
     \notag=&\frac{1-\exp(-\hbar\omega_{21}/k_BT)}{1+\exp(-\hbar\omega_{21}/k_BT)}\frac{V}{N}\abs{p_{12}}^2E_0\exp(i\omega t)\times\\
-    &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left[\frac{1}{\hbar(\omega+\omega_{21}-i\Gamma_{21})}-\frac{1}{\hbar(\omega-\omega_{21}-i\Gamma_{21})}\right].
+    &\qquad\left[\frac{1}{\hbar(\omega+\omega_{21}-i\Gamma_{21})}-\frac{1}{\hbar(\omega-\omega_{21}-i\Gamma_{21})}\right].
 \end{align}
-\normalsize
-当外场的频率接近两个能级之间的跃迁频率，$\omega\approx\omega_{21}$，上式中括号内第一项的绝对值将远小于第二项的绝对值，从而可近似为
+当外场的频率接近两个能级之间的跃迁频率，$\omega\approx\omega_{21}$，上式可近似为
 \scriptsize
 \begin{align}
-    \notag\langle\hat{P}\rangle\approx&-\frac{1-\exp(-\hbar\omega_{21}/k_BT)}{1+\exp(-\hbar\omega_{21}/k_BT)}\frac{N}{V}\abs{p_{12}}^2E_0\exp(i\omega t)\frac{1}{\hbar(\omega-\omega_{21}-i\Gamma_{21})}\\
-    =&-\frac{1-\exp(-\hbar\omega_{21}/k_BT)}{1+\exp(-\hbar\omega_{21}/k_BT)}\frac{N\abs{p_{12}}^2}{\hbar V}\frac{(\omega-\omega_{21})+i\Gamma_{21}}{(\omega-\omega_{21})^2+\Gamma_{21}^2}E(t).
+    \langle\hat{P}\rangle\approx-\frac{1-\exp(-\hbar\omega_{21}/k_BT)}{1+\exp(-\hbar\omega_{21}/k_BT)}\frac{N\abs{p_{12}}^2}{\hbar V}\frac{(\omega-\omega_{21})+i\Gamma_{21}}{(\omega-\omega_{21})^2+\Gamma_{21}^2}E(t).
 \end{align}
 \normalsize
 由此得到气体的电极化率为
@@ -575,17 +622,9 @@ $\Gamma_{21}>0$为密度矩阵相干矩阵元自发弛豫系数.
 \end{align}
 其中$C$为一常数.
 可以验证
-\tiny
 \begin{align}
-    \notag&\frac{1}{\pi}\frac{1}{\omega}*\im[\chi(\omega)]=\frac{1}{\pi}\int_{-\infty}^{+\infty}d\xi\,\frac{1}{\omega-\xi}\cdot C\frac{\gamma}{(\xi-\omega_0)^2+\gamma^2}\\
-    \notag=&\lim_{\xi\rightarrow+\infty}\frac{C}{\pi}\frac{1}{2[(\omega-\omega_0)^2+\gamma^2]}\times\\
-    \notag&\left\{\gamma\{\ln[(\xi-\omega_0)^2+\gamma^2]-2\ln(\xi-\omega)\}+2\omega\arctan\left(\frac{\xi-\omega_0}{\gamma}\right)\right.\\
-    \notag&\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad+2\omega_0\arctan\left(\frac{\omega_0-\xi}{\gamma}\right)\\
-    \notag&-\gamma\ln[(\xi-\omega_0)^2+\gamma^2]+2\ln(\xi-\omega)\}-2\omega\arctan\left(\frac{\xi-\omega_0}{\gamma}\right)\\
-    \notag&\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.-2\omega_0\arctan\left(\frac{\omega_0-\xi}{\gamma}\right)\right\}\\
-    =&C\frac{(\omega-\omega_0)}{(\omega-\omega_0)^2+\gamma^2}=\re[\chi(\omega)].
+    \notag&\frac{1}{\pi}\frac{1}{\omega}*\im[\chi(\omega)]=\re[\chi(\omega)].
 \end{align}
-\normalsize
 满足Kramers-Kronig关系.
 
 \subsection{Mach-Zehnder干涉仪原理}
@@ -624,17 +663,16 @@ $\Gamma_{21}>0$为密度矩阵相干矩阵元自发弛豫系数.
 
 当存在长度为$\Delta z$的铷蒸汽腔，折射率为$n=n_0(1+i\kappa)$的铷蒸汽会给B路光束在原有相位上带来额外的相位差（广义上的相位差，包含了衰减，为一复数）：
 \begin{align}
-    e^{\frac{\omega}{c}(n-1)\Delta z}=e^{i\frac{\omega}{c}}e^{-\frac{\omega}{c}n_0\kappa\Delta z}=e^{i\delta}e^{-\tau},
+    e^{\frac{\omega}{c}(n-1)\Delta z}=e^{i\frac{\omega}{c}(n_0-1)\Delta z}e^{-\frac{\omega}{c}n_0\kappa\Delta z}=e^{i\delta}e^{-\tau},
 \end{align}
-其中铷蒸汽的吸收系数（传播单位距离光强衰减的百分比）
+其中吸收系数
 \begin{align}
-    \notag\tau=&\frac{\omega}{c}n_0\kappa\Delta z=\frac{\omega}{c}\frac{\pi Nfe^2}{mV}\frac{\gamma/\omega_0}{\Delta\omega^2+\gamma^2}\\
-    \approx&\frac{\pi Nfe^2}{cmV\gamma}\frac{\gamma^2}{\Delta\omega^2+\gamma^2}=\frac{\tau_0\gamma^2}{\Delta\omega^2+\gamma^2},
+    \tau=\frac{\omega}{c}n_0\kappa\Delta z=\frac{\omega}{c}\frac{\pi Nfe^2}{mV}\frac{\gamma/\omega_0}{\Delta\omega^2+\gamma^2}\Delta z\approx\frac{\tau_0\gamma^2}{\Delta\omega^2+\gamma^2}\Delta z,
 \end{align}
 相移
 \begin{align}
-    \notag\delta=&\frac{\omega}{c}(n_0-1)\Delta z=-\frac{\omega}{c}\frac{\pi Nfe^2}{mV}\frac{\Delta\omega/\omega_0}{\Delta\omega^2+\gamma^2}\\
-    \approx&-\frac{\pi Nfe^2}{cmV\gamma}\frac{\Delta\omega\gamma}{\Delta\omega^2+\gamma^2}=-\frac{\tau_0\Delta\omega\gamma}{\Delta\omega^2+\gamma^2},
+    \notag\delta=&\frac{\omega}{c}(n_0-1)\Delta z=-\frac{\omega}{c}\frac{\pi Nfe^2}{mV}\frac{\Delta\omega/\omega_0}{\Delta\omega^2+\gamma^2}\Delta z\\
+    \approx&-\frac{\tau_0\Delta\omega\gamma}{\Delta\omega^2+\gamma^2}\Delta z,
 \end{align}
 以上约等号成立的条件为$\omega\approx\omega_0$，其中
 \begin{align}
@@ -642,7 +680,7 @@ $\Gamma_{21}>0$为密度矩阵相干矩阵元自发弛豫系数.
 \end{align}
 相移和吸收系数两者之间具有关系：
 \begin{align}
-    \delta=-\tau\frac{\Delta\omega}{\tau}.
+    \delta=-\tau\frac{\Delta\omega}{\gamma}.
 \end{align}
 此时A、B两路光束再次叠加时得到的电场分量为
 \begin{align}
@@ -650,9 +688,17 @@ $\Gamma_{21}>0$为密度矩阵相干矩阵元自发弛豫系数.
 \end{align}
 干涉光强与入射光强的比值为
 \begin{align}
+    \label{I/I_0-with-cell}
     \frac{I}{I_0}=\frac{\abs{E}^2}{E_0^2}=\frac{1}{4}\left[1+e^{-2\tau}+e^{-\tau}\cos\left(\frac{\omega}{c}\Delta L+\delta\right)\right].
 \end{align}
-对于$\tau_0$和$\Delta L$的不同取值，我们可以得到干涉光强随入射激光频率的各式变化关系，如图\ref{output-with-cell}所示. 若$\tau=0$，$\delta=0$，上式即为无铷蒸汽腔的情况推出的式\eqref{I/I_0-without-cell}.
+若$\tau=0$，$\delta=0$，上式即为无铷蒸汽腔的情况推出的式\eqref{I/I_0-without-cell}.
+
+对于$\tau_0$和$\Delta L$的不同取值，我们可以得到干涉光强随入射激光频率的各式变化关系，如图\ref{output-with-cell}所示. 由图\ref{output-with-cell}可预测干涉光强变化的两大趋势：
+\begin{itemize}
+    \item[(1)] 随着$\tau_0$增大，干涉光强随$\Delta\omega$的振荡变化加剧，谐振频率附近干涉光强不随$\Delta\omega$变化的范围增大；
+    \item[(2)] $\frac{\omega c}{L}$每变化$\pi$，$I/I_0-\Delta\omega/\gamma$曲线的极大变为极小，极小变为极大.
+\end{itemize}
+
 \begin{figure}[H]
     \centering
     \subfigure[$\tau_0=0.4$]{
@@ -672,24 +718,71 @@ $\Gamma_{21}>0$为密度矩阵相干矩阵元自发弛豫系数.
 \subsection{利用饱和吸收法测量铷蒸汽吸收谱}
 
 \subsubsection{实验设定}
+如图\ref{light-path}所示. 由一带有反射光栅的外腔反馈二极管激光器发出的激光，经过中性滤光片衰减后被一$1^{\circ}$楔形10-90分束镜分为三束：其中光强占总光强$10\%$的两束反射光，分别作为探测光和参考光入射温度维持在$50~^{\circ}$C的Rb蒸汽吸收室，最终分别被两个光电二极管探测器接收；光强占总光强$90\%$的透射光经过两面反射镜反射后，被一50-50分束器反射，作为泵浦光以与探测光路径重合的路径反向入射Rb吸收室实现饱和吸收.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.9\columnwidth]{LightPath.pdf}
+    \caption{实验装置: \textcircled{\footnotesize{1}}——带有反射光栅的外腔反馈二极管激光器，Sanyo DL-7140-201A，最大功率$70$ mW，中心波长$785$ nm；\textcircled{\footnotesize{2}}——中性滤光片，Thor Labs NE10B，透过率$15\%$@$780$ nm；\textcircled{\footnotesize{3}}——10-90分束镜，Red Optronics RWP 10X，楔形，$1^{\circ}$，\textcircled{\footnotesize{4}}\textcircled{\footnotesize{5}}——平面反射镜，Thor Labs ME1-G01，\textcircled{\footnotesize{6}}——50-50分束器，Edmunds Optics Y45-853，\textcircled{\footnotesize{7}}——Rb蒸汽吸收室，\textcircled{\footnotesize{8}}\textcircled{\footnotesize{9}}——光二极管探测器，PDB-C108. 红色箭头表示各路光束的传播方向，其粗细对应光束的强度.}
+    \label{light-path}
+\end{figure}
+
+如图\ref{laser-gian}所示，激光的模式由其中半导体介质、内腔、反射光栅、外腔的增益所共同决定，四者的增益函数之积最大的频率将在模式竞争中被选出，从而成为出射激光的频率. 当我们调节反射光栅的角度和位置，我们将改变反射光栅和外腔的增益函数，而当我们调节激光器的激励电流时，电流的热效应将影响半导体介质的折射率和内腔的长度，从而改变半导体介质、内腔的增益函数. 单调地调节这些参数的某一个，则选出的模式频率并不总是单调变化，而可能发生模式跳变. 为了激光频率的连续扫描，我们用三角波同步调制激光器的激励电流和激光器外腔的压电陶瓷. \textcircled{\footnotesize{8}}号探测器测得饱和吸收光谱，\textcircled{\footnotesize{9}}号探测器测得无饱和的吸收光谱（参考光的吸收光谱）.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.9\columnwidth]{LaserGain.pdf}
+    \caption{半导体介质、内腔、反射光栅、外腔的增益共同决定了出射激光的频率}
+    \label{laser-gian}
+\end{figure}
 
 \subsubsection{结果与分析}
+
+实验测得铷蒸汽吸收光谱（参考光吸收光谱），去除背底后如图\ref{saturated-absorption-exp}(a)所示. 利用高斯峰形对该光谱进行多峰拟合，得到$85$a,$87$a的峰面积之比为$74.1\%:25.9\%$，此即铷蒸汽吸收室中两种同位素$^{87}$Rb和$^{85}$Rb的占比，与其在自然界中的丰度比值$72.17\%:27.83\%$相近.
+
+$85$b峰高斯峰形拟合得其多普勒展宽为$0.708$ GHz，注意到$85$b峰中实际上对应有三种不同的跃迁，故减去这这三个跃迁频率的最大值与最小值之差，得铷蒸汽实际多普勒展宽的近似值$0.542$ GHz，利用式\eqref{Doppler-width}推算得气体温度为$332$ K，符合实验中设定的温度.
+
+去除背底后的铷蒸汽饱和吸收光谱如图\ref{saturated-absorption-exp}(b)所示. 将吸收光谱和饱和吸收光谱按照一定比例相减，得到烧孔谱线如图\ref{saturated-absorption-exp}(c)所示，取信噪比相对较高的85b峰处对应的烧孔谱线，局部放大得到图\ref{saturated-absorption-exp}(d). 这三个烧孔对应于图\ref{energy-state}所示的87b的三个跃迁的交叉共振. 实验数据显示这三个烧孔的两两间距分别为$0.03$ GHz和$0.07$ Ghz，与其理论值$\frac{0.063}{2}\text{GHz}=0.0315$ GHz和$\frac{0.121}{2}\text{GHz}=0.0605$GHz符合得较好.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.9\columnwidth]{SaturatedAbsorptionSpectrum.pdf}
+    \caption{(a) 铷蒸汽吸收光谱，(b) 蒸汽饱和吸收光谱，(c) 烧孔谱线，(d) 85b烧孔谱线局部放大（所有谱线横坐标均以$87a$和$87b$之间的频率为基准推得，均已扣除由于激光强度改变带来的线性背底）}
+    \label{saturated-absorption-exp}
+\end{figure}
 
 \subsection{利用Mach-Zehnder干涉仪验证折射率的Kramers-Kronig关系}
 
 \subsubsection{实验设定}
 
+如图\ref{M-Z-light-path}所示，激光器发出激光经中性滤光片衰减后被一50-50分束器（\textcircled{\footnotesize{3}}）分为两束，分别被\textcircled{\footnotesize{4}}和\textcircled{\footnotesize{5}}反射后，其中一路经过铷蒸汽腔，然后在另一50-50分束器（\textcircled{\footnotesize{6}}）处再次重合并发生干涉，由凸透镜\textcircled{\footnotesize{8}}扩束后用小孔光阑\textcircled{\footnotesize{9}}选出$0$级干涉条纹，进入光电二极管\textcircled{\footnotesize{10}}得到信号. 通过调节铷蒸汽腔温度的方式，改变腔内蒸汽密度$N$来改变式\eqref{I/I_0-with-cell}中的$\tau$（或者说$\tau_0$）；通过按压光学面包板来改变式\eqref{I/I_0-with-cell}中的两条光路距离差$\Delta L$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.9\columnwidth]{M-Z-LightPath.pdf}
+    \caption{实验装置: \textcircled{\footnotesize{1}}——带有反射光栅的外腔反馈二极管激光器，Sanyo DL-7140-201A，最大功率$70$ mW，中心波长$785$ nm；\textcircled{\footnotesize{2}}——中性滤光片，Thor Labs NE10B，透过率$15\%$@$780$ nm；\textcircled{\footnotesize{3}}\textcircled{\footnotesize{6}}——50-50分束镜，Edmunds Optics Y45-853，\textcircled{\footnotesize{4}}\textcircled{\footnotesize{5}}——平面反射镜，Thor Labs ME1-G01，\textcircled{\footnotesize{7}}——Rb蒸汽吸收室，\textcircled{\footnotesize{8}}——凸透镜，\textcircled{\footnotesize{9}}——小孔光阑，\textcircled{\footnotesize{10}}——光二极管探测器，PDB-C108. 红色箭头表示各路光束的传播方向，其粗细对应光束的强度.}
+    \label{M-Z-light-path}
+\end{figure}
+
 \subsubsection{结果与分析}
 
-\section{结论}
+出射激光强度随频率扫描得到谱线如图\ref{M-Z-InterferenceSpectrum}. 图\ref{M-Z-InterferenceSpectrum}(a)和(b)中干涉信号关于入射激光频率的谱线均随着温度的升高其关于温度产生更大幅度和更密集的振荡，且在原吸收峰的中心频率处产生更宽的等强度“平台”，图\ref{M-Z-InterferenceSpectrum}(c)中随着通过按压面包板以改变$\Delta L$，谱线原有凸起变为凹陷，而原有凹陷变为凸起. 这些特征均与上一节中从理论模拟结果中归纳得到的谱线关于$\tau_0$和$\Delta L$的变化特征一致，这间接证明了铷原子蒸汽这一体系所满足的Kramers-Kronig关系.
 
-\section{反思}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.9\columnwidth]{M-Z-InterferenceSpectrum.pdf}
+    \caption{M-Z干涉仪出射光谱. (a) 不同温度下$85$a峰；(b) 不同温度下$87$b和$85$b峰；(c) 不同程度按压面包板时$85$a峰.}
+    \label{M-Z-InterferenceSpectrum}
+\end{figure}
+
+\section{结论}
+我们利用饱和吸收法测量了铷蒸汽中$^{85}$Rb和$^{97}$Rb两种同位素在$780$ nm波长附近的超精细结构吸收谱，谱线间距符合铷原子的超精细结构，峰面积之比符合铷原子同位素丰度之比，多普勒展宽符合腔内铷原子蒸汽的设定温度. 在对铷原子饱和吸收谱理解的基础上，我们利用Mach-Zehnder干涉仪测量了与铷原子蒸汽相互作用后的激光与原始激光之间的干涉谱，定性地验证了铷原子蒸汽所满足的Kramers-Kronig关系.
 
 \begin{appendix}
-\section{参考文献}
+\section*{Reference}
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{References}
 \end{appendix}
-\end{multicols}
+\end{multicols*}
 \end{document}
