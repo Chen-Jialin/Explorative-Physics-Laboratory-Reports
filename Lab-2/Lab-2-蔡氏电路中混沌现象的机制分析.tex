@@ -1,0 +1,53 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage[vmargin=.75in,hmargin=.5in]{geometry}
+\usepackage{multicol}
+\usepackage{amsmath, amssymb, amsthm, bm, mathrsfs}
+\allowdisplaybreaks[4] % 公式跨页 Cross-page equations
+\providecommand{\abs}[1]{\left\lvert#1\right\rvert} % 绝对值 Absolute
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert} % 范数 Norm
+\providecommand{\re}{\,\text{Re}\,} % 复数的实部 Real part of complex number
+\providecommand{\im}{\,\text{Im}\,} % 复数的虚部 Imaginary part of complex number
+\providecommand{\sgn}{\,\text{sgn}\,} % 符号函数 Sign function
+\providecommand{\sinc}{\,\text{sinc}\,} % 辛格函数 sinc function
+\providecommand{\bra}[1]{\left\langle#1\right\rvert} % 左矢 Bra
+\providecommand{\ket}[1]{\left\lvert#1\right\rangle} % 右矢 Ket
+\providecommand{\braket}[2]{\left\langle#1\left\vert\right.#2\right\rangle} % 右矢接左矢 Contiguous ket after bra
+\providecommand{\tr}{\,\text{Tr}\,} % 右矢接左矢 Contiguous ket after bra
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfigure}
+\begin{document}
+\title{蔡氏电路中混沌现象的机制分析}
+\author{陈稼霖\and 薛加民}
+\date{2020 年 11 月 18 日}
+\maketitle
+\begin{abstract}
+蔡氏电路是一种含有非线性元件的电路，在其演化的过程中，呈现出典型的混沌现象. 从分岔图、李雅普诺夫指数等角度均可验证蔡氏电路中的混沌现象，但这些方法依旧停留在较为抽象的层面. 我们提出了一种对蔡氏电路演化机理的直观解释：将蔡氏电路视为一个自由度为$3$的系统，三个广义坐标确定了系统对应的相点在相空间中的位置，由基尔霍夫定律导出的描述蔡氏电路演化的微分方程组刻画了分布在相空间中的广义力场，相点受广义力作用在相空间中运动. 相空间中存在两个能够吸引相点的吸引子，它们相互竞争相点的归属权，从而使相点的演化呈现混沌现象. 吸引子对相点的吸引能力随蔡氏电路相关参数的改变而改变，这解释了相点演化轨迹的四种不同类型. 我们通过理论模拟与实验相结合的方法验证了上述观点，实验中还观察到了李萨如图跳变的现象，这进一步证实了吸引子对相点的竞争机制.
+\end{abstract}
+
+\begin{multicols*}{2}
+
+\section{理论背景}
+
+\section{蔡氏电路混沌现象的验证}
+
+\subsection{蔡氏电路演化路径的理论模拟}
+
+\subsection{分岔图}
+
+\subsection{李雅普诺夫指数}
+
+\section{蔡氏电路演化机制的直观解释}
+
+\section{实验验证}
+
+\begin{appendix}
+\section*{Reference}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{References}
+    \end{appendix}
+\end{multicols*}
+\end{document}
